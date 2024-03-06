@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="topNav.css">
+    <title>Top Navigation Bar</title>
+</head>
+<body>
+    <div class="top-nav">
+        <div class="logo">
+            <a href=""><img src="cophee icon.png"></a>
+        </div>
+        <div class="main-nav">
+            <li><a class="home-btn" href="">Home</a></li>
+            <li><a href="">Location</a></li>
+            <li><a href="">About Us</a></li>
+        </div>
+
+        <div class="login-nav">
+            <button type="submit" class="login-btn" id="login-btn" onclick="showLogin()">Login</i></button>
+            <div class="half"></div>
+            <button type="submit" class="resigter-btn" id="resigter-btn" onclick="showResigter()">Resigter</i></button>
+        </div>        
+    </div>
+
+    <div class="search-container">
+        <input type="text" placeholder="Search by name, location..." id="search-bar"/>
+        <button type="submit" id="search-btn" onclick="searchFunction()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+    
+    <div class="recommend-container">
+        <p onclick="fillSearchBar(this)">#phuong 8</p>
+        <p onclick="fillSearchBar(this)">#phuong 2</p>
+        <p onclick="fillSearchBar(this)">#view dep</p>
+        <p onclick="fillSearchBar(this)">#hung vuong</p>
+        <p onclick="fillSearchBar(this)">#phu dong</p>
+        <p onclick="fillSearchBar(this)">#sang trong</p>
+        <p onclick="fillSearchBar(this)">#chill</p>
+        <p onclick="fillSearchBar(this)">#thuc an</p>
+        <p onclick="fillSearchBar(this)">#ngon</p>
+    </div>
+
+    <div class="login-form" id="loginForm">
+        <h2>LOGIN</h2>
+        <form>
+            <input type="text" placeholder="Username" id="username-input" required>
+            <input type="text" placeholder="Password" id="password-input" required>
+            <button type="submit" onclick="getKeyLogin()">Login</button>
+        </form>
+    </div>
+
+    <div class="resigter-form" id="resigterForm">
+        <h2>RESIGTER</h2>
+        <form>
+            <input type="text" placeholder="Name" id="name-input">
+            <input type="email" placeholder="Email" id="email-input" pattern="[a-zA-Z0-9._%+-]+@gmail.com$">
+            <input type="text" placeholder="Password" id="password-input">
+            <button type="submit" onclick="getKeyResigter()">Resigter</button>
+        </form>
+    </div>
+
+    <p id="search-result-content"></p>
+
+    <script src="topNav.js"></script>
+</body>
+</html>
