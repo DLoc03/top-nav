@@ -26,7 +26,7 @@ function searchFunction() {
         document.getElementById('search-result-content').innerHTML = '';
     }
     else {
-        document.getElementById('search-result-content').innerHTML = `Search result of '${result}'`;
+        document.getElementById('search-result-content').innerHTML = `Nga dở hơi'`;
         clearSearchBar();
         console.log(result)
     }
